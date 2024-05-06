@@ -11,9 +11,9 @@
   ## Description
  Tech Blog is a platform where users can create an account and enjoy dynamic blog post features tailored for the tech community. Share your insights, discoveries, and experiences in the ever-evolving world of technology. The Tech Blog provides an intuitive interface to create, update, and delete blog posts effortlessly.
 
-  [Tech Blog Website]([(https://shrouded-plateau-17923-163bcd4dc95e.herokuapp.com/)])
+  [Tech Blog Website](https://shrouded-plateau-17923-163bcd4dc95e.herokuapp.com/)
 
-## Features
+## Feature
 - User Authentication: Register for an account or log in securely.
 - Create Blog Posts: Share your ideas with the world by creating captivating blog posts.
 - Update and Delete: Easily manage your content by updating or deleting your blog posts.
