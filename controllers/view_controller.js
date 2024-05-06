@@ -10,7 +10,13 @@ module.exports = {
     },
 
     async showDashboardPage(req, res) {
+        
         try {
+
+            if (!req.session.user_id) {
+                return res.redirect('/login')
+            }
+            
             const posts = await Post.findAll({
                 where: {
                     user_id: req.session.user_id
@@ -18,12 +24,8 @@ module.exports = {
                 include: User
             })
 
-            
             const currentUser = req.session.user_id ? true : false
             
-            if(currentUser === false) {
-                res.redirect('/login')
-            }
             
             res.render('dashboard', {
                 posts: posts.map(eobj => eobj.get({ plain: true })),
