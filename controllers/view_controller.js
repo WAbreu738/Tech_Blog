@@ -18,6 +18,10 @@ module.exports = {
                 include: User
             })
 
+            if(!user) {
+                res.redirect('/login')
+            }
+            
             const currentUser = req.session.user_id ? true : false
 
             res.render('dashboard', {
