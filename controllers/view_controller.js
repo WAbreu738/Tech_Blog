@@ -18,12 +18,13 @@ module.exports = {
                 include: User
             })
 
-            if(!user) {
+            
+            const currentUser = req.session.user_id ? true : false
+            
+            if(currentUser === false) {
                 res.redirect('/login')
             }
             
-            const currentUser = req.session.user_id ? true : false
-
             res.render('dashboard', {
                 posts: posts.map(eobj => eobj.get({ plain: true })),
                 user: currentUser
